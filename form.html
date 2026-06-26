@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <!-- FORMS-> parang ano.... pinag samang cin tsaka if statement sa C++-->
+    <title>Forms in websites</title>
+</head>
+
+<body>
+
+
+    <!-- ACTION-> eto ung cout sa loob ng if statement,, naka depende kung ano nilagay mo.. yun yung lilitaw-->
+    <!-- METHOD-> eto ung kung paano mo kukuhanin yung data-->
+    <!-- METHOD="POST"-> KAPAG SENSITIVE DATA ANG ILALAGAY-->
+    <!-- METHOD="GET"-> KAPAG NAMAN HINDI SENSITIVE YUNG ILALAGAY NA DATA.. KASI LILITAW SA URL YUNG NILAGAY MO-->
+    <!-- ENCTYPE-> para sa mga malalaking file or image.,.. pag hihiwalayin tas pag na received na.. pag sasamahin.. basta ganun explaination-->
+    <form action="" target="_blank" method="POST" enctype="multipart/form-data">
+
+        <!-- LABEL-> parang cout or print sa C++-->
+        <label for="username">Username:</label>
+
+        <!-- INPUT-> parang cin sa C++-->
+        <!-- TYPE-> naka depende kung ano gusto mo gawin nya,, kung kukunin yung data, submit, reset, basta all about sa input-->
+        <!-- ID-> parang nag declare ka ng variable after ng data type-->
+        <!-- REQUIRED-> self explanatory.. parang sa mga gform,, d ka makakpag submit pag blanko-->
+        <!-- MINLENGTH OR MINIMUM LENGTH-> d ka makakapag submit pag kulang ung nilagay mo-->
+        <!-- MAXLENGTH-> vise versa ng minlength-->
+        <!-- PALCEHOLDER-> nagbibigay ng hint kung ano ang ilalagay sa text box-->
+        <!-- PATTERN-> dapat nakalagay dito kung ano yung nilagay mo sa placeholder,, tas hindi sila makakapag submit pag hindi sinundan yung placeholder-->
+        <input type="text" id="username" minlength="6" placeholder="Spongebob Squarepants" required>
+
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" minlength="8" placeholder="********" required>
+
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" minlength="10" placeholder="123@gmail.com" requried>
+
+        <br>
+        <label for="phone">Phone #:</label>
+        <input type="tel" id="phone" minlength="10" placeholder="123-4567-890" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"
+            requried>
+
+        <br>
+        <label for="bday">Birth Date:</label>
+        <input type="date" id="bday" required>
+
+        <!-- VALUE-> parang ano,, default ganun,, yung pag ka run mo ng code,, kung ano meorn sa value,, yun agad ung lilitaw,, pero pede palitan habang ang ra-run-->
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="0" max="10" value="1">
+
+        <!-- NAME-> ginagamit yan sa type="radio" parang multiple choices.. para isa lang yung mapili-->
+        <br>
+        <label for="gender">Sex:<label>
+
+                <br>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender">
+
+                <br>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender">
+
+                <br>
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender">
+
+
+                <!-- SELECT-> drop down list,, basta ganun-->
+                <!-- OPTION-> self explanatory-->
+                <br>
+                <label for=money>Payment</label>
+                <select>
+
+                    <option value="gcash">Gcash</option>
+                    <option value="paymaya">Paymaya</option>
+                    <option value="paypal">Paypal</option>
+                    <option value="credit-card">Credit card</option>
+                </select>
+
+                <!-- CHECK BOX-> self explanatory-->
+                <br>
+                <label for=pog>Pogi: </label>
+                <input type="checkbox" id="pog">
+
+                <!-- TEXTAREA-> gagawa ng text area... dva ang galeng-->
+                <br>
+                <label for=comment>Comment </label>
+                <textarea id="comment" rows="1" cols="25"></textarea>
+
+                <!-- FILE-> pano ko ba to explain.. basta para makapag lagay ka ng file-->
+                <!-- ACCEPT-> basically ,, parang if statement,, kung ano ang hinahanap.. un lang ung malalagay mo-->
+                <br>
+                <label for=file>File </label>
+                <input type="file" id="file" accept="image/png, image/jpg, image/jpeg">
+
+
+                <br><br>
+                <input type="reset">
+                <input type="submit">
+
+    </form>
+
+
+
+    <!-- JAVA SCRIPT TOH,, PANG PRIVACY LANG-->
+    <script src="privacy.js"> </script>
+
+</body>
+
+
+
+</html>
